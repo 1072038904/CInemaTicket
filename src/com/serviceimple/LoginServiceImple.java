@@ -15,7 +15,7 @@ public class LoginServiceImple implements LoginService{
 @Autowired
 	private LoginDao loginDao;
 	public LoginServiceImple() {
-		// TODO 自动生成的构造函数存根
+		// TODO 
 	}
 
 	public LoginServiceImple(LoginDao loginDao) {
@@ -23,18 +23,18 @@ public class LoginServiceImple implements LoginService{
 		this.loginDao = loginDao;
 	}
 	@Override
-	public String IsValid(Account account) {
-		// TODO 自动生成的方法存根
-		List<Account> pl =loginDao.find("from Account where account='"+account.getAccount()+"'");	
+	public int IsValid(Account account) {
+		// TODO 
+		List<Account> pl =loginDao.find("from Account where userphone='"+account.getUserphone()+"'");	
 			if(pl.isEmpty()!=true){
 				for (Object ele : pl)
 			{
 				Account p = (Account)ele;
 				if(account.getPassword().equals(p.getPassword()))
-				return "success";
+				return 1;
 			}
 			}
-			return "error";
+			return 2;
 	}
 
 }

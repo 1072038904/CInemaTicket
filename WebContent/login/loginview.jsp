@@ -8,8 +8,8 @@
 </head>
 <body>
 <s:form action="isvalid" method="post">
-		用户名:<input type="text" name="account.account"/><br>
-		密码:<input type="password" name="account.password"/><br>
+		<input type="text" name="account.userphone"/><br>
+		<input type="password" name="account.password"/><br>
 		<input	type="submit" value="提交"/>
 	</s:form>
 

@@ -7,8 +7,8 @@
 	<!-- 需要继承 struts-default包 -->
 	<package name="Login" extends="struts-default">
 			<action name="isvalid" class="com.action.LoginAction" method="login">
-			<result name="success">loginview_success.jsp</result>
-			<result name="error">loginview_error.jsp</result>
+			<result name="success">homepage.jsp</result>
+			<result name="error">LoginView_error.jsp</result>
 		</action>
 		
 	</package>

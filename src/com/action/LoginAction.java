@@ -35,7 +35,6 @@ public class LoginAction extends ActionSupport{
 		this.account = account;
 	}
 	public LoginAction() {
-		// TODO 自动生成的构造函数存根
 	}
 	public String login()throws Exception{
 		System.out.println(loginService.IsValid(account));
@@ -44,6 +43,9 @@ public class LoginAction extends ActionSupport{
 			System.out.println("2312");
 			return "eorror";
 		}
-		return loginService.IsValid(account);
+		if(loginService.IsValid(account)==1)
+		return "success";
+		else
+			return "error";
 	}
 }

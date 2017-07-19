@@ -14,7 +14,7 @@ public class Account implements Serializable{
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
 	//账号ֵ
-	private String account;
+	private String userphone;
 	//密码ֵ
 	private String password;
 	//权限ֵ
@@ -31,11 +31,15 @@ public class Account implements Serializable{
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	public String getAccount() {
-		return account;
+	
+	public String getUserphone() {
+		return userphone;
 	}
-	public void setAccount(String account) {
-		this.account = account;
+	public void setUserphone(String userphone) {
+		this.userphone = userphone;
+	}
+	public static long getSerialversionuid() {
+		return serialVersionUID;
 	}
 	public String getPassword() {
 		return password;

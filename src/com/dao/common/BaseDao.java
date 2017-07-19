@@ -29,5 +29,5 @@ public interface BaseDao<T>
 	List<T> findAll(Class<T> entityClazz);
 	// ��ȡʵ������
 	long findCount(Class<T> entityClazz);
-	 List<T> find(String hql);
+	List<T> find(String hql);
 }

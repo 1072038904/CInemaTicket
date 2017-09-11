@@ -8,8 +8,14 @@
 	<package name="Login" extends="struts-default">
 			<action name="isvalid" class="com.action.LoginAction" method="login">
 			<result name="success">homepage.jsp</result>
-			<result name="error">LoginView_error.jsp</result>
-		</action>
-		
+			<result name="error" >LoginView_error.jsp</result>
+		</action>	
+	</package>
+	<!--注册账号  -->
+	<package name="Register" extends="struts-default">
+	<action name="Register" class="com.action.RegisterAction" method="isExisted">
+	<result name="existed">/login/loginview_error.jsp</result>
+	<result name="none">/login/loginview_success.jsp</result>
+	</action>
 	</package>
 </struts>
